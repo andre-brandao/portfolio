@@ -1,5 +1,5 @@
 <script>
-	import Toggle from './toggle.svelte';
+	import Toggle from '$lib/components/toggle.svelte';
 	import * as config from '$lib/config';
 </script>
 
@@ -18,6 +18,9 @@
         </li>
         <li>
             <a href="/rss.xml" target="_blank">RSS</a>
+        </li>
+        <li>
+            <a href="/git3dgraph">Git3D</a>
         </li>
     </ul>
 
