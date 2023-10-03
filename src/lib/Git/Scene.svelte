@@ -13,7 +13,7 @@
 
 	onMount(async () => {
         $scaleY = 1;
-		const response = await fetch('/andre-brandao/2023');
+		const response = await fetch('api/git/andre-brandao/2023');
 		contributions = await response.json();
 	});
 
@@ -30,7 +30,7 @@
 			case 4:
 				return '#00d35c'
             default:
-                return '#00d35c'
+                return '#fff'
         }
     }
 

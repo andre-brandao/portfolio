@@ -1,12 +1,52 @@
 <script lang="ts">
-	import Contribuitions from '$lib/Git/Contribuitions.svelte';
+	import { formatDate } from '$lib/utils';
+	import * as config from '$lib/config'
+
+	export let data
 </script>
 
-<!-- <Contribuitions /> -->
+<svelte:head>
+	<title>{config.title}</title>
+</svelte:head>
 
-<p>
-	Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo veniam recusandae earum maiores,
-	eveniet magni nisi iure, consequuntur sit temporibus vel dignissimos, quia ab quis distinctio
-	soluta. Consequatur eum deleniti voluptas ea, suscipit sapiente earum, nam assumenda incidunt iure
-	quis quia asperiores est animi molestiae ducimus. Excepturi ipsa libero expedita?
-</p>
+<!-- Posts -->
+<section>
+	<ul class="posts">
+		{#each data.posts as post}
+			<li class="post">
+				<a href={post.slug} class="title">{post.title}</a>
+				<p class="date">{formatDate(post.date)}</p>
+				<p class="description">{post.description}</p>
+			</li>
+		{/each}
+	</ul>
+</section>
+
+<style>
+	.posts {
+		display: grid;
+		gap: 2rem;
+	}
+
+	.post {
+		max-inline-size: var(--size-content-3);
+	}
+
+	.post:not(:last-child) {
+		border-bottom: 1px solid var(--border);
+		padding-bottom: var(--size-7);
+	}
+
+	.title {
+		font-size: var(--font-size-fluid-3);
+		text-transform: capitalize;
+	}
+
+	.date {
+		color: var(--text-2);
+	}
+
+	.description {
+		margin-top: var(--size-3);
+	}
+</style>
