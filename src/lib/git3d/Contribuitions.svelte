@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Canvas } from '@threlte/core';
-	import Scene from '$lib/git/Scene.svelte';
+	import Scene from '$lib/git3d/Scene.svelte';
 </script>
 
 <div class="scene">

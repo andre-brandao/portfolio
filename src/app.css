@@ -14,7 +14,7 @@ html {
 	--surface-2-dark: var(--gray-11);
 	--surface-3-dark: var(--gray-10);
 	--surface-4-dark: var(--gray-9);
-	--background-dark: var(--gradient-8);
+	--background-dark: var(--gradient-23);
 	--border-dark: var(--gray-9);
 
 	/* light */
@@ -25,7 +25,7 @@ html {
 	--surface-2-light: var(--gray-1);
 	--surface-3-light: var(--gray-2);
 	--surface-4-light: var(--gray-3);
-	--background-light: none;
+	--background-light: var(--gradient-9);
 	--border-light: var(--gray-4);
 }
 

@@ -1,8 +1,5 @@
 <script lang="ts">
-	import Contribuitions from './../../lib/git/Contribuitions.svelte';
-    import type { PageData } from './$types';
-    
-    export let data: PageData;
+	import Contribuitions from '$lib/git3d/Contribuitions.svelte';
 </script>
 
 
