@@ -12,7 +12,7 @@
 	import PageTransition from '$lib/components/transition.svelte';
 
 	import '../app.css';
-	
+
 	import { afterNavigate } from '$app/navigation';
 
 	afterNavigate(() => {
@@ -21,7 +21,7 @@
 			button.className = 'copy-button';
 			const svgIcon = document.createElement('img');
 			svgIcon.src = 'copy-icon.svg';
-			svgIcon.alt = 'Copy'; 
+			svgIcon.alt = 'Copy';
 			button.appendChild(svgIcon);
 			button.onclick = () => navigator.clipboard.writeText(node.textContent ?? '');
 
@@ -53,10 +53,14 @@
 	main {
 		padding-block: var(--size-9);
 	}
-
+	
 	@media (min-width: 1440px) {
 		.layout {
 			padding-inline: 0;
+		}
+		main{
+			margin-top: var(--size-8);
+			
 		}
 	}
 </style>
