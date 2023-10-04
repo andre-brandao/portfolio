@@ -143,6 +143,11 @@ li {
 
 .prose p:not(:is(h2, h3, h4, h5, h6) + p) {
 	margin-top: var(--size-7);
+	margin-bottom: var(--size-2);
+}
+
+.prose p {
+	max-inline-size: 100%;
 }
 
 .prose :is(ul, ol) {
@@ -160,4 +165,20 @@ li {
 	padding: 1rem;
 	border-radius: 8px;
 	tab-size: 2;
+	white-space: pre-wrap;
 }
+
+.prose pre code {
+	display: block;
+	counter-reset: line;
+  }
+  
+  .prose pre .line::before {
+	content: counter(line);
+	counter-increment: line;
+	display: inline-block;
+	width: 2em; /* Adjust the width as needed */
+	text-align: right;
+	margin-right: 1em; /* Adjust the spacing between line number and code */
+	color: #999; /* Color of the line number */
+  }
