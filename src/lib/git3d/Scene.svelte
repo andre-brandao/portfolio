@@ -47,7 +47,7 @@
 
 </script>
 
-<Grid infiniteGrid sectionColor="#4a4b4a" sectionSize={20} cellSize={20} fadeDistance={400} />
+<Grid infiniteGrid sectionColor="#4a4b4a" sectionSize={20} cellSize={20} fadeDistance={800} />
 
 <T.PerspectiveCamera makeDefault position={[10, 500, 300]} fov={60}>
 	<OrbitControls enableDamping autoRotate />
