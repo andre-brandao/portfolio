@@ -3,16 +3,31 @@
 
 	export let data: LayoutData;
 
-    
 	import 'open-props/style';
 	import 'open-props/normalize';
 	import 'open-props/buttons';
-    
+
 	import Header from '$lib/components/header.svelte';
 	import Footer from '$lib/components/footer.svelte';
 	import PageTransition from '$lib/components/transition.svelte';
 
 	import '../app.css';
+	
+	import { afterNavigate } from '$app/navigation';
+
+	afterNavigate(() => {
+		for (const node of document.querySelectorAll('pre > code')) {
+			const button = document.createElement('button');
+			button.className = 'copy-button';
+			const svgIcon = document.createElement('img');
+			svgIcon.src = 'copy-icon.svg';
+			svgIcon.alt = 'Copy'; 
+			button.appendChild(svgIcon);
+			button.onclick = () => navigator.clipboard.writeText(node.textContent ?? '');
+
+			node.parentNode?.prepend(button);
+		}
+	});
 </script>
 
 <div class="layout">
