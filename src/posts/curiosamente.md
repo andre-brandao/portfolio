@@ -10,9 +10,9 @@ categories:
   - Hackatruck
 published: true
 ---
+<!-- ## Table of Contents -->
 
-
-A Swift app for conducting quizzes in the fields of geography, math, and text. The app provides an interactive platform for users to test their knowledge and improve their skills in these subjects.
+A Swift app for conducting quizzes in the fields of geography, math and languages. The app provides an interactive platform for users to test their knowledge and improve their skills in these subjects.
 
 The App was developed for the [PUC-MG HackaTruck 2023](https://hackatruck.com.br/area/Home/O+Projeto/Apresenta%C3%A7%C3%A3o/), a hackathon promoted by IBM, Apple and others.
 
