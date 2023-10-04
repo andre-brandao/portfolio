@@ -7,7 +7,6 @@ categories:
   - firebase
   - supabase
   - tailwindcss
-published: true
 ---
 
 ## Table of Contents
