@@ -178,23 +178,23 @@ li {
 	content: counter(line);
 	counter-increment: line;
 	display: inline-block;
-	width: 2em; /* Adjust the width as needed */
+	width: 2em; 
 	text-align: right;
-	margin-right: 1em; /* Adjust the spacing between line number and code */
-	color: #999; /* Color of the line number */
+	margin-right: 1em; 
+	color: #999;
 }
 
 .prose .copy-button {
+	border: none;
 	background-color: gray;
 	padding: 5px 10px;
 	cursor: pointer;
 	border-radius: 5px;
 	position: absolute;
-	top: 0; /* Adjust top and right values as needed */
+	top: 0; 
 	right: 0;
 }
 
 .prose .copy-button > img{
 	border-radius: 0;
-	fill: white;
 }
