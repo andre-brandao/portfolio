@@ -34,6 +34,8 @@
 		padding-block: var(--size-7);
 		background-color: var(--border);
 		padding-inline: var(--size-7);
+
+		box-shadow: var(--shadow-2);
 	}
 
 	.links {

@@ -150,7 +150,7 @@ li {
 }
 
 .prose :is(ul, ol) {
-	list-style-type: '🔥';
+	list-style-type: '->';
 	padding-left: var(--size-5);
 }
 
@@ -164,9 +164,10 @@ li {
 	padding: 1rem;
 	border-radius: 8px;
 	tab-size: 2;
-	white-space: pre-wrap;
 	position: relative;
 	cursor: default;
+	white-space: pre-wrap;
+	overflow-wrap: break-word; /* add this line */
 }
 
 .prose pre code {

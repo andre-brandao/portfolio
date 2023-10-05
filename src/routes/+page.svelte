@@ -59,8 +59,9 @@
 	}
 
 	.title {
-		font-size: var(--font-size-fluid-3);
+		font-size: var(--font-size-fluid-2);
 		text-transform: capitalize;
+		color: var(--text-1);
 	}
 
 	.date {
@@ -69,5 +70,6 @@
 
 	.description {
 		margin-top: var(--size-3);
+		color: var(--text-3);
 	}
 </style>
