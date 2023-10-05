@@ -1,11 +1,14 @@
 <script lang="ts">
 	import { Canvas } from '@threlte/core';
 	import Scene from '$lib/git3d/Scene.svelte';
+
+	export let user = 'andre-brandao'
+	export let year = '2023'
 </script>
 
 <div class="scene">
 	<Canvas>
-		<Scene />
+		<Scene user={user} year={year}/>
 	</Canvas>
 </div>
 
