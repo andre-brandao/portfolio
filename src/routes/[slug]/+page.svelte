@@ -48,6 +48,7 @@
 
 	.tags {
 		display: flex;
+		flex-wrap: wrap;
 		gap: var(--size-3);
 		margin-top: var(--size-7);
 	}

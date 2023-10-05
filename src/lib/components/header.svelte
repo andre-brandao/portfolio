@@ -30,10 +30,10 @@
 </nav>
 
 <style>
-	/* make it fixed at the top*/
 	nav {
 		padding-block: var(--size-7);
 		background-color: var(--border);
+		padding-inline: var(--size-7);
 	}
 
 	.links {
@@ -42,7 +42,7 @@
 
 	a {
 		color: inherit;
-		text-decoration: none;
+		/* text-decoration: none; */
 	}
 
 	@media (min-width: 768px) {
@@ -53,8 +53,7 @@
 			top: 0;
 			left: 0;
 			right: 0;
-            z-index: 1;
-			/* align-items: center; */
+			z-index: 1;			
 		}
 
 		.links {
