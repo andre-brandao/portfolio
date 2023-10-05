@@ -10,7 +10,6 @@ published: true
 ---
 ## Table of Contents
 
-
 ![UI Demo](https://github.com/andre-brandao/puzzle_solving_algorithms/raw/master/rdme_images/solver_print.png)
 
 ## Description

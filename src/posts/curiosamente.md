@@ -19,6 +19,7 @@ The App was developed for the [PUC-MG HackaTruck 2023](https://hackatruck.com.br
 The code for the project is availeble at this [Github Repo](https://github.com/andre-brandao/curiosamente)
 
 ## Screenshots
+
 ![Curiosamente](https://github.com/andre-brandao/curiosamente/blob/main/Imagens/app1.png?raw=true)
 
 ---
