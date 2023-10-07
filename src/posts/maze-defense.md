@@ -5,6 +5,8 @@ date: '2023-4-14'
 categories:
   - Unity
   - C#
+  - PUC-MG
+
 published: true
 ---
 
@@ -18,6 +20,12 @@ The game was developed using Unity and C#.
 
 ![MazeDefense](md-map.jpeg)
 One of the game maps.
+
+<div style="display:flex; justify-content:center;">
+  <img src="md-concept-1.jpeg" style="width:50%; margin-right:10px;">
+  <img src="md-concept-2.jpeg" style="width:50%; margin-left:10px;">
+</div>
+Concept art for the game.
 
 ---
 

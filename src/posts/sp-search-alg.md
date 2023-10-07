@@ -6,19 +6,23 @@ categories:
   - Python
   - Search Algorithms
   - Sliding Puzzle
+  - PUC-MG
 published: true
 ---
 ## Table of Contents
 
-![UI Demo](https://github.com/andre-brandao/puzzle_solving_algorithms/raw/master/rdme_images/solver_print.png)
-
 ## Description
+
+<div style="display:flex; justify-content:space-between;">
+    <img src="https://github.com/andre-brandao/puzzle_solving_algorithms/raw/master/rdme_images/solver_print.png" alt="UI Demo" style="width:45%;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Batgirl.gif" alt="PUZZLE demo" style="width:45%;">
+</div>
 
 This project is a python implementation of the following search algorithms: **A Star, BFS, DFS, and Greedy Search.**
 
 If you are using the A* or Greedy Search algorithms, you can choose between the following heuristics: **Manhattan Distance, Euclidean Distance, and Hamming Distance.**
 
-The algorithms are used to solve the 8-puzzle problem. The 8-puzzle problem is a puzzle invented and popularized by Noyes Palmer Chapman in the 1870s. It is played on a 3-by-3 grid with 8 square blocks labeled 1 through 8 and a blank square. The goal is to rearrange the blocks so that they are in order. The blank square is represented by the number 0. The following is an example of a 8-puzzle problem:
+The algorithms are used to solve the [8-puzzle problem](https://en.wikipedia.org/wiki/Sliding_puzzle). The [8-puzzle problem](https://en.wikipedia.org/wiki/Sliding_puzzle) is a puzzle invented and popularized by Noyes Palmer Chapman in the 1870s. It is played on a 3-by-3 grid with 8 square blocks labeled 1 through 8 and a blank square. The goal is to rearrange the blocks so that they are in order. The blank square is represented by the number 0. The following is an example of a [8-puzzle problem](https://en.wikipedia.org/wiki/Sliding_puzzle):
 
 **You can get the project code in this [Github Repo](https://github.com/andre-brandao/puzzle_solving_algorithms)**
 
@@ -41,7 +45,7 @@ def bfs(board: Board, **kwargs) -> SearchResult:
     goal = new_board(*board.shape)
     initial_state = State(np.copy(board), find_blank(board))
     unvisited = collections.deque([initial_state])
-    visited: set[FrozenBoard] = set()
+    visited: set[Board] = set()
 
     # stats
     generated, expanded = 0, 0
@@ -85,7 +89,7 @@ def dfs(board: Board, **kwargs) -> SearchResult:
     goal = new_board(*board.shape)
     initial_state = State(np.copy(board), find_blank(board))
     unvisited = [initial_state]
-    visited: set[FrozenBoard] = set()
+    visited: set[Board] = set()
 
     # stats
     generated, expanded = 0, 0
@@ -133,7 +137,7 @@ def a_star(board: Board, **kwargs) -> SearchResult:
     goal = new_board(*board.shape)
     initial_state = State(np.copy(board), find_blank(board))
     unvisited = [initial_state]
-    visited: set[FrozenBoard] = set()
+    visited: set[Board] = set()
 
     # stats
     generated, expanded = 0, 0
