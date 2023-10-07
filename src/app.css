@@ -27,6 +27,8 @@ html {
 	--surface-4-light: var(--gray-3);
 	--background-light: var(--gradient-9);
 	--border-light: var(--gray-4);
+
+  
 }
 
 :root {
@@ -87,6 +89,61 @@ html {
 	--border: var(--border-light);
 }
 
+[color-scheme='custom-1'] {
+	color-scheme: custom-1;
+  
+	--brand: #FF5733;
+	--text-1: #333333;
+	--text-2: #666666;
+	--surface-1: #FFFFFF;
+	--surface-2: #F0F0F0;
+	--surface-3: #CCCCCC;
+	--surface-4: #EFEFEF;
+	--background: #F5F5F5;
+	--border: #DDDDDD;
+  }
+  [color-scheme='custom-2'] {
+	color-scheme: custom-2;
+  
+	--brand: #0077B6;
+	--text-1: #333333;
+	--text-2: #666666;
+	--surface-1: #F4A261;
+	--surface-2: #2A9D8F;
+	--surface-3: #E9C46A;
+	--surface-4: #EF476F;
+	--background: #282c35;
+	--border: #CCCCCC;
+  }
+  
+  [color-scheme='custom-3'] {
+	color-scheme: custom-3;
+  
+	--brand: #F0C14B;
+	--text-1: #333333;
+	--text-2: #666666;
+	--surface-1: #F2E7D9;
+	--surface-2: #A2D2FF;
+	--surface-3: #7C7C7C;
+	--surface-4: #FF6F61;
+	--background: #F9F9F9;
+	--border: #AAAAAA;
+  }
+  
+  [color-scheme='custom-4'] {
+	color-scheme: custom-4;
+  
+	--brand: #FF9800;
+	--text-1: #333333;
+	--text-2: #666666;
+	--surface-1: #FFC107;
+	--surface-2: #E91E63;
+	--surface-3: #4CAF50;
+	--surface-4: #2196F3;
+	--background: #F5F5F5;
+	--border: #CCCCCC;
+  }
+  
 html,
 body {
 	height: 100%;

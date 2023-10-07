@@ -21,10 +21,24 @@
 				</li>
 			</a>
 		{/each}
+		<li class="coming-soon">
+			<p class="title">Theres More<p/>
+			<!-- <p class="date">{formatDate(post.date)}</p> -->
+			<p class="description">I have other projects, but I did not write a post for it, most are in C or Java for college classes.</p>
+		</li>
+		
 	</ul>
 </section>
 
 <style>
+	.coming-soon {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+
 	a {
 		text-decoration: none;
 	}
