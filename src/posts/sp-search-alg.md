@@ -1,7 +1,7 @@
 ---
 title: Search Algorithms for Puzzle Solving
 description: An study of many search algorithms and heuristics for puzzle solving.
-date: '2023-4-14'
+date: '2023-6-11'
 categories:
   - Python
   - Search Algorithms

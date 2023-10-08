@@ -1,7 +1,7 @@
 ---
 title: Menu and Ordering System
 description: A menu and ordering system for Villa Rica Pousada.
-date: '2023-4-14'
+date: '2023-8-29'
 categories:
   - sveltekit
   - firebase
@@ -17,6 +17,10 @@ published: true
 
 This was acctualy the reason i learned svelte, when I started learning html, css and js,
 
+Source code: [git](https://github.com/andre-brandao/cardapio-svelte)
+
+## Prototipe
+
 versao prototipo 0.1
 ![Villa Rica Pousada](pousada0.1.png)
 
@@ -26,11 +30,11 @@ gitsvelte
 pocketbase aws isntance
 ![Villa Rica Pousada](pocketbase-pousada01.png)
 
-Controle produtos admin
-![Villa Rica Pousada](pousada-controle-prod.png)
+## Current Version
 
-Cadastro de produtos
-![Villa Rica Pousada](pousada-cadastro-prod.png)
+### Features
+
+#### Vision of the client
 
 Menu QR Code
 ![Villa Rica Pousada](pousada-tela-quarto.png)
@@ -48,9 +52,20 @@ Menu QR Code
   </div>
 </div>
 
+#### Product Management
+
+Controle produtos admin
+![Villa Rica Pousada](pousada-controle-prod.png)
+
+Cadastro de produtos
+![Villa Rica Pousada](pousada-cadastro-prod.png)
+
+#### Kitchen Orders
+
 Pedidos Admin
 ![Villa Rica Pousada](pousada-pedidos.png)
 
+#### Permissions of the colaborators
+
 Permissoes Admin
 ![Villa Rica Pousada](pousada-perms-func.png)
-

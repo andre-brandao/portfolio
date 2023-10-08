@@ -1,7 +1,7 @@
 ---
 title: Curiosamente SwiftApp
 description: A simple game made for HackaTruck 2023.
-date: '2023-4-14'
+date: '2023-5-12'
 categories:
   - Swift
   - IOS

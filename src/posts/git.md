@@ -1,7 +1,7 @@
 ---
 title: 3D Git Contribuitions Graph
 description: 3D threlte visualization of my git contribuitions.
-date: '2023-4-14'
+date: '2023-09-29'
 categories:
   - sveltekit
   - svelte
