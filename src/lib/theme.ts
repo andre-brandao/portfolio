@@ -21,7 +21,6 @@ export function toggleTheme() {
 	});
 }
 
-// set the theme
 export function setTheme(newTheme: Theme) {
 	theme.set(newTheme);
 }

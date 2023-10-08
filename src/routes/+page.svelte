@@ -22,16 +22,16 @@
 				</li>
 			</a>
 		{/each}
-		<li class="coming-soon">
-			<p class="title">Theres More</p>
-			<p />
-			<!-- <p class="date">{formatDate(post.date)}</p> -->
-			<p class="description">
-				I have other projects, but I did not write a post for it, most are in C or Java for college
-				classes.
-			</p>
-		</li>
 	</ul>
+	<div class="coming-soon">
+		<p class="title">Theres More</p>
+		<p />
+		<!-- <p class="date">{formatDate(post.date)}</p> -->
+		<p class="description">
+			I have other projects, but I did not write a post for it, most are in C or Java for college
+			classes.
+		</p>
+	<div/>
 </section>
 
 <style>
@@ -41,6 +41,9 @@
 		justify-content: center;
 		align-items: center;
 		text-align: center;
+		padding-top: var(--size-7);
+		padding-bottom: var(--size-7);
+		
 	}
 
 	a {

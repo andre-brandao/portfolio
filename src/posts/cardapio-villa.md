@@ -17,6 +17,15 @@ published: true
 
 This was acctualy the reason i learned svelte, when I started learning html, css and js,
 
+versao prototipo 0.1
+![Villa Rica Pousada](pousada0.1.png)
+
+gitsvelte
+![Villa Rica Pousada](svelte-git.png)
+
+pocketbase aws isntance
+![Villa Rica Pousada](pocketbase-pousada01.png)
+
 Controle produtos admin
 ![Villa Rica Pousada](pousada-controle-prod.png)
 
