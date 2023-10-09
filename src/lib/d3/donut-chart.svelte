@@ -1,17 +1,18 @@
 <script>
    //@ts-nocheck
+   import { slide } from 'svelte/transition';
    import { quantize, interpolatePlasma, pie, arc } from 'd3';
    // import data from './donut-data' // or pass data to component as prop
    export let data;
 
-   const width = 600; // the outer width of the chart, in pixels
+   const width = 550; // the outer width of the chart, in pixels
    const height = width; // the outer height of the chart, in pixels
    const percent = true; // format values as percentages (true/false)
    const fontSize = 10; // the font size of the x and y values
    const strokeWidth = 1; // the width of stroke separating wedges
    const strokeLinejoin = 'round'; // line join style of stroke separating wedges
    const outerRadius = Math.min(width, height) * 0.5 - 60; // the outer radius of the circle, in pixels
-   const innerRadius = 125; // the inner radius of the chart, in pixels
+   const innerRadius = 100; // the inner radius of the chart, in pixels
    const labelPosition = 0.4; // the position of the label offset from center
    const labelRadius = innerRadius * labelPosition + outerRadius * 0.6; // center radius of labels
    const strokeColorWOR = 'white'; //stroke color when inner radius is greater than 0
@@ -44,15 +45,18 @@
 </script>
 
 <svg {width} {height} viewBox="{-width / 2} {-height / 2} {width} {height}">
-   {#each wedges as wedge, i}
-      <!-- <div class="hover"> -->
+   {#each wedges as wedge, i (wedge)}
       <path
          fill={colors[i]}
          d={arcPath(wedge)}
          {stroke}
          stroke-width={strokeWidth}
          stroke-linejoin={strokeLinejoin}
+         animate:slide={{ duration: 1000 }}
       />
+   {/each}
+
+   {#each wedges as wedge, i}
       <g text-anchor="middle" transform="translate({arcLabel.centroid(wedge)})">
          <text font-size={fontSize}>
             <tspan font-weight="bold">{xVals[i]}</tspan>
@@ -63,15 +67,16 @@
             >
          </text>
       </g>
-      <!-- </div> -->
    {/each}
 </svg>
 
 <style>
-   /* //add a modifier to path when .hover class is hoverd */
 
-   /* path+g:hover , */
    path:hover {
       fill: green; /* Change the fill color to green when hovered */
    }
+   /* g{
+      fill: var(--text-1);
+   } */
+
 </style>

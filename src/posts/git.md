@@ -12,10 +12,10 @@ published: true
 
 <script>
 
-  import Contribuitions from '$lib/git3d/Contribuitions.svelte'
+  import Contribuitions3D from '$lib/git3d/Contribuitions.svelte'
 </script>
 
-<Contribuitions/>
+<Contribuitions3D/>
 
 ## How was it made?
 

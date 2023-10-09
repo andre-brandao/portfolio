@@ -1,8 +1,9 @@
 <script>
    import Toggle from '$lib/components/toggle.svelte';
    import * as config from '$lib/config';
+   import { eeCounter } from '$lib/stores';
    import { Ghost } from 'lucide-svelte';
-</script>
+  </script>
 
 <nav>
    <a href="/" class="title">
@@ -24,14 +25,20 @@
             <a href="/rss.xml" target="_blank">RSS</a>
         </li> -->
       <li>
-         <a href="/git3dgraph">Git3D</a>
+         <a href="/gitstats">GitStats</a>
       </li>
-      <li>
+      <!-- <li>
          <a href="/d3graph">D3</a>
-      </li>
+      </li> -->
    </ul>
 
-   <Toggle />
+   <Toggle /> 
+<!-- 
+   <button on:click={()=>{
+      eeCounter.found('test'+Math.random());
+   }}>test ee</button>
+
+  -->
 </nav>
 
 <style>

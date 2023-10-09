@@ -1,11 +1,8 @@
 import { writable } from 'svelte/store';
+import { notifications } from './components/notification.svelte';
 
 function createEECounter() {
 	const { subscribe, set, update } = writable<string[]>([]);
-
-	// const ee = ['custom-themes', 'your-git-3d'];
-
-	// empty array to store found ee
 
 	return {
 		subscribe,
@@ -19,6 +16,7 @@ function createEECounter() {
                 console.log('found a ee:' + foundEE);
 				ee = [...ee, foundEE];
 				console.log(ee);
+				notifications.push('EE:'+foundEE);
 				return ee;
 			});
 		},

@@ -2,16 +2,18 @@
    //@ts-nocheck
    import { scaleLinear, scaleBand } from 'd3';
    import { flip } from 'svelte/animate';
+   import { quintOut } from 'svelte/easing';
+   import { fade, fly, scale, slide } from 'svelte/transition';
 
    export let data; // or pass data to component as prop
 
    const marginTop = 20; // top margin, in pixels
-   const marginRight = 0; // right margin, in pixels
-   const marginBottom = 30; // bottom margin, in pixels
+   const marginRight = 10; // right margin, in pixels
+   const marginBottom = 20; // bottom margin, in pixels
    const marginLeft = 50; // left margin, in pixels
-   const width = 600; // width of the chart, in pixels
-   const height = 300; // height of the chart, in pixels
-   const xPadding = 0.2; // padding between bars
+   const width = 650; // width of the chart, in pixels
+   const height = 350; // height of the chart, in pixels
+   const xPadding = 0.3; // padding between bars
    const yFormat = ''; // unit to display on y-axis ticks
    const yLabel = 'Commits'; // label for the y-axis
    const color = '#00d35c'; // bar fill color
@@ -63,16 +65,16 @@
 
    <svg {width} {height} viewBox="0 0 {width} {height}">
       <g class="x-axis" transform="translate(0,{height - marginBottom})">
-         <path class="domain" stroke="black" d="M{marginLeft}, 0.5 H{width}" />
+         <path class="domain" stroke="var(--text-2)" d="M{marginLeft}, 0.5 H{width}" />
          {#each reactiveXVals as xVal, i}
             <g class="tick" opacity="1" transform="translate({reactiveXScale(xVal)},0)">
                <line
                   x1={reactiveXScale.bandwidth() / 2}
                   x2={reactiveXScale.bandwidth() / 2}
-                  stroke="black"
+                  stroke="var(--text-1)"
                   y2="6"
                />
-               <text y={marginBottom} dx={reactiveXScale.bandwidth() / 4}>{xVal}</text>
+               <text y={marginBottom} dx={reactiveXScale.bandwidth() / 4}>{xVal} </text>
             </g>
          {/each}
       </g>
@@ -93,30 +95,30 @@
       </g>
 
       <g class="bars">
-         {#each reactiveYVals as bar, i (bar)}
+         {#each reactiveYVals as bar, i (i)}
             <rect
+               key={i}
                x={reactiveXScale(reactiveXVals[i])}
                y={reactiveYScale(reactiveYVals[i])}
                width={reactiveXScale.bandwidth()}
                height={reactiveYScale(0) - reactiveYScale(bar)}
                fill={color}
-               animate:flip={{ duration: 1000 }}
+               animate:flip={{ duration: 750, easing: quintOut }}
             />
          {/each}
       </g>
       <g>
-         {#each reactiveYVals as txt_bar, i (txt_bar)}
+         {#each reactiveYVals as txt_bar, i (i)}
             <text
+               class="texto"
                x={reactiveXScale(reactiveXVals[i]) + reactiveXScale.bandwidth() / 2}
                y={reactiveYScale(reactiveYVals[i]) - 5}
                text-anchor="middle"
-               fill="black"
                font-size="10px"
-               animate:flip={{ duration: 1000 }}
+               animate:slide={{ duration: 1000 }}
             >
                {txt_bar}
             </text>
-            <!-- content here -->
          {/each}
       </g>
    </svg>
@@ -132,7 +134,8 @@
    }
 
    select {
-      color: black;
+      color: var(--text-1);
+      background-color: var(--border);
       padding: 5px;
       width: 190px;
    }
@@ -147,32 +150,36 @@
       font-size: '10px';
       font-family: sans-serif;
       text-anchor: 'end';
+      fill: var(--text-1);
    }
 
    .x-axis {
       font-size: '10px';
       font-family: sans-serif;
       text-anchor: 'end';
-   }
-
-   .tick {
-      opacity: 1;
+      color: var(--text-1);
    }
 
    .tick-start {
-      stroke: black;
+      stroke: var(--text-1);
       stroke-opacity: 1;
    }
 
    .tick-grid {
-      stroke: black;
+      stroke: var(--text-1);
       stroke-opacity: 0.2;
       font-size: '11px';
-      color: black;
+      color: var(--text-1);
    }
 
    .tick text {
-      fill: black;
+      fill: var(--text-1);
       text-anchor: start;
+   }
+
+   .texto {
+      fill: var(--text-1);
+      font-weight: 700;
+      font-size: 30px;
    }
 </style>

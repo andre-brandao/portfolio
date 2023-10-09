@@ -12,9 +12,7 @@
         <div>
             <Egg />
             {#key $eeCounter}
-                
-                
-            {$eeCounter.length}
+            {$eeCounter.length}/5 EE Found
             {/key}
         </div>
 
