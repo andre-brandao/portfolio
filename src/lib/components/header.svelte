@@ -1,11 +1,13 @@
 <script>
 	import Toggle from '$lib/components/toggle.svelte';
 	import * as config from '$lib/config';
+	import { Ghost } from 'lucide-svelte';
 </script>
 
 <nav>
 	<a href="/" class="title">
-		<b>{config.title}</b>
+		<Ghost />
+		<b> {config.title}</b>
 	</a>
 
 	<ul class="links">
@@ -30,6 +32,11 @@
 </nav>
 
 <style>
+	.title{
+		display: flex;
+		align-items: center;
+		/* gap: var(--size-7); */
+	}
 	nav {
 		padding-block: var(--size-7);
 		background-color: var(--border);
@@ -40,6 +47,8 @@
 
 	.links {
 		margin-block: var(--size-7);
+
+		gap: var(--size-7);
 	}
 
 	a {
@@ -55,13 +64,18 @@
 			top: 0;
 			left: 0;
 			right: 0;
-			z-index: 1;			
+			z-index: 1;
 		}
 
 		.links {
 			display: flex;
 			gap: var(--size-7);
 			margin-block: 0;
+		}
+
+		.links li:not(:last-child) a {
+			border-right: 1px solid var(--text-1);
+			padding-right: var(--size-7);
 		}
 	}
 </style>

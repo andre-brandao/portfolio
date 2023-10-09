@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Contribuitions from '$lib/git3d/Contribuitions.svelte';
-
+	import { eeCounter } from '$lib/stores';
 	let user = 'andre-brandao';
 	let year = '2023';
 
@@ -17,6 +17,7 @@
 			selected_user = user;
 			selected_year = year;
 			console.log(selected_user, selected_year);
+			eeCounter.found('ur-git-graph');
 		}}>refresh graph</button
 	>
 </div>

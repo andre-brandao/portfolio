@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { eeCounter } from '$lib/stores';
 	import { theme, setCustomTheme } from '$lib/theme';
 	//import type theme
 	import type { Theme } from '$lib/theme';
@@ -11,6 +12,7 @@
 <select
 	bind:value={$theme}
 	on:change={(e) => {
+		eeCounter.found('custom-themes');
 
         // TODO improve this shit code
 

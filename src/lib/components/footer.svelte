@@ -1,12 +1,22 @@
-<script>
+<script lang="ts">
 	import * as config from '$lib/config';
-	import { Github, Linkedin } from 'lucide-svelte';
+	import { eeCounter } from '$lib/stores';
+	import { Egg, Github, Linkedin } from 'lucide-svelte';
 </script>
+
 
 <footer>
     <p>{config.title} &copy {new Date().getFullYear()}</p>
-
+    
     <div>
+        <div>
+            <Egg />
+            {#key $eeCounter}
+                
+                
+            {$eeCounter.length}
+            {/key}
+        </div>
 
         <a href="https://github.com/andre-brandao" target="_blank">
             <Github/>
