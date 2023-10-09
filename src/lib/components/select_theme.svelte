@@ -1,72 +1,69 @@
 <script lang="ts">
-	import { eeCounter } from '$lib/stores';
-	import { theme, setCustomTheme } from '$lib/theme';
-	//import type theme
-	import type { Theme } from '$lib/theme';
-
-	//create a function to change the theme
+   import { eeCounter } from '$lib/stores';
+   import { theme, setCustomTheme } from '$lib/theme';
+   //import type theme
+   import type { Theme } from '$lib/theme';
 
 </script>
 
 <!-- select theme -->
 <select
-	bind:value={$theme}
-	on:change={(e) => {
-		eeCounter.found('custom-themes');
+   bind:value={$theme}
+   on:change={(e) => {
+      eeCounter.found('custom-themes');
 
-        // TODO improve this shit code
+      // TODO improve this shit code
 
-        //@ts-ignore
-		const newTheme = e.target?.value;
-		switch (newTheme) {
-			case 'light':
-				setCustomTheme('light');
+      //@ts-ignore
+      const newTheme = e.target?.value;
+      switch (newTheme) {
+         case 'light':
+            setCustomTheme('light');
 
-				break;
+            break;
 
-			case 'dark':
-				setCustomTheme('dark');
+         case 'dark':
+            setCustomTheme('dark');
 
-				break;
+            break;
 
-			case 'custom-1':
-				setCustomTheme('custom-1');
+         case 'custom-1':
+            setCustomTheme('custom-1');
 
-				break;
+            break;
 
-			case 'custom-2':
-				setCustomTheme('custom-2');
+         case 'custom-2':
+            setCustomTheme('custom-2');
 
-				break;
+            break;
 
-			case 'custom-3':
-				setCustomTheme('custom-3');
+         case 'custom-3':
+            setCustomTheme('custom-3');
 
-				break;
+            break;
 
-			case 'custom-4':
-				setCustomTheme('custom-4');
+         case 'custom-4':
+            setCustomTheme('custom-4');
 
-				break;
+            break;
 
-			default:
-				break;
-		}
+         default:
+            break;
+      }
 
-		console.log(newTheme);
-	}}
+      console.log(newTheme);
+   }}
 >
-	<option value="light">Light</option>
-	<option value="dark">Dark</option>
-	<option value="custom-1">C1</option>
-	<option value="custom-2">C2</option>
-	<option value="custom-3">C3</option>
-	<option value="custom-4">C4</option>
+   <option value="light">Light</option>
+   <option value="dark">Dark</option>
+   <option value="custom-1">C1</option>
+   <option value="custom-2">C2</option>
+   <option value="custom-3">C3</option>
+   <option value="custom-4">C4</option>
 </select>
 
 <style>
-    select {
-    background: var(--surface-1);
-    
-    }
+   select {
+      background: var(--surface-1);
+   }
 </style>
