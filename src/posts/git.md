@@ -21,7 +21,7 @@ published: true
 
 Im using the github contribuitions api to get the html and then parse it to get the data I need.
 
-A fullscreen version of the graph can be found [here](/git3dgraph)
+A fullscreen version of the graph can be found [here](/gitstats)
 
 The full code for the API can be found [here](https://github.com/andre-brandao/portfolio/blob/main/src/routes/api/git/%5Buser%5D/%5Byear%5D/%2Bserver.ts)
 
