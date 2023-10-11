@@ -12,3 +12,5 @@ vite.config.ts.timestamp-*
 .markdownlint.json
 
 .vercel
+
+pnpm-lock.yaml

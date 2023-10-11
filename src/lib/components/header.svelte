@@ -64,6 +64,7 @@
    a {
       color: inherit;
       /* text-decoration: none; */
+      white-space: nowrap;
    }
 
    @media (min-width: 768px) {
