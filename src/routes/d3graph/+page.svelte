@@ -6,6 +6,7 @@
 	import ScatterChart from '$lib/d3/scatter-chart.svelte';
 
 	import { onMount } from 'svelte';
+   import AudioPlayer from '$lib/audio/AudioPlayer.svelte';
 
 	let data: { x: string; y: number }[] = [];
 	$: scatterData = [
@@ -59,10 +60,30 @@
 
 		return sortedResult;
 	}
-</script>
 
-{#if data.length > 0}
-	<DonutChart {data} />
-	<BarChart {data} />
+	function sumCountsPerMonth(contributions: Contributions[]){
+
+	}
+</script>
+<div class="centered">
+
+	<!-- <AudioPlayer /> -->
+</div>
+<!-- {#if data.length > 0} -->
+	<!-- <DonutChart {data} /> -->
+	<!-- <BarChart {data} /> -->
 	<!-- <ScatterChart data={scatterData} /> -->
-{/if}
+<!-- {/if} -->
+
+
+<style>
+	.centered {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		justify-content: center;
+		gap: 0.5em;
+		max-width: 40em;
+		margin: 0 auto;
+	}
+</style>

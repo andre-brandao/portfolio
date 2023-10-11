@@ -9,7 +9,7 @@
     <p>{config.title} &copy {new Date().getFullYear()}</p>
     
     <div>
-        <div>
+        <div on:mouseover={()=>(eeCounter.found('Easter Egg'))}>
             <Egg />
             {#key $eeCounter}
             {$eeCounter.length}/5 EE Found
