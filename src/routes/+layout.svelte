@@ -53,12 +53,10 @@
 <style>
    span {
       display: flex;
-	  align-items: center;
-	  gap: 0.5rem;
-   
+      align-items: center;
+      gap: 0.5rem;
 
-
-	  background-color: var(--surface-3);
+      background-color: var(--surface-3);
       border-top-left-radius: 0.5rem;
       color: var(--brand);
       /* display: block; */
@@ -66,8 +64,7 @@
       bottom: 0;
       right: 0;
       padding: 2.5rem;
-	  box-shadow: var(--shadow-3);
-   
+      box-shadow: var(--shadow-3);
    }
    .layout {
       /* height: 100%; */
