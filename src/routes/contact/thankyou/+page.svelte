@@ -2,7 +2,9 @@
    <p class="title">Thank you for contacting me!</p>
    <p class="sub-title">I will get back to you as soon as possible.</p>
    <!-- if you want a faster answer please contact me via whats app on (31) 99787-3559 -->
-   <p>Or contact me via WhastsApp on **(31) 99787-3559**.</p>
+   <p>Or contact me by</p>
+   <p>WhatsApp: (31) 99787-3559</p>
+   <p>email: brandaoandre00@gmail.com</p>
 </main>
 
 <style>

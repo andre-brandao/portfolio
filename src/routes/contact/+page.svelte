@@ -3,11 +3,12 @@
    import { z } from 'zod';
    import type { PageData } from './$types';
    import { superForm } from 'sveltekit-superforms/client';
+   import { eeCounter } from '$lib/stores';
 
    export let data: PageData;
    // export const prerender = false;
 
-   let { form, errors, constraints, enhance} = superForm(data.form);
+   let { form, errors, constraints, enhance } = superForm(data.form);
 </script>
 
 <main>
@@ -52,7 +53,13 @@
             rows="10"
          />
       </div>
-      <button>Send Message</button>
+      <button
+         on:click={() => {
+
+               eeCounter.found('Contact Me');
+            
+         }}>Send Message</button
+      >
    </form>
 </main>
 

@@ -36,9 +36,10 @@ export const actions = {
          console.log((await result).error);
       } catch (error) {
          setError(form, 'email', 'Error saving message on db');
+         return fail(400, { form });
       }
 
-      throw redirect(301, '/contact/thankyou');
+      throw redirect(302, '/contact/thankyou');
 
       // Yep, return { form } here too
       return { form };
