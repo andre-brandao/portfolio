@@ -3,27 +3,17 @@ import { parseHTML } from 'linkedom';
 import type { RouteParams } from './$types.js';
 
 export async function GET({ params, setHeaders }) {
-   //    const year = 60 * 60 * 24 * 365;
+   const year = 60 * 60 * 24 * 365;
 
    // https://vercel.com/docs/edge-network/caching#cdn-cache-control
-   //    setHeaders({
-   //       'Access-Control-Allow-Origin': '*',
-   //       'Cache-Control': `public, s-maxage=${year}`,
-   //       'CDN-Cache-Control': `public, s-maxage=${year}`,
-   //       'Vercel-CDN-Cache-Control': `public, s-maxage=${year}`,
-   //    });
-
    setHeaders({
-      'Access-Control-Allow-Origin': '*', // allow CORS
-      'Cache-Control': `public, s-maxage=${60 * 60 * 24 * 365}`, // one year
+      'Access-Control-Allow-Origin': '*',
+      'Cache-Control': `public, s-maxage=${year}`,
+      'CDN-Cache-Control': `public, s-maxage=${year}`,
+      'Vercel-CDN-Cache-Control': `public, s-maxage=${year}`,
    });
 
-   //    console.log('getContributions');
-
    const html = await getContributions(params);
-
-   //    console.log(html);
-
    return json(parseContributions(html));
 }
 
@@ -62,38 +52,29 @@ function parseContributions(html: string) {
       const days = row.querySelectorAll<HTMLTableCellElement>(
          'td:not(.ContributionCalendar-label)'
       );
-      //   console.log('Days:');
-
-      //   console.log(days);
 
       const currentRow = [];
 
       const dayOfWeekElement = row.querySelector('td.ContributionCalendar-label');
-      //   if (dayOfWeekElement) {
-      const dayOfWeek = dayOfWeekElement.querySelector('span:first-child').textContent;
-      //  currentRow.push(dayOfWeek);
-      //   }
+      const dayOfWeek = dayOfWeekElement!.querySelector('span:first-child')!.textContent;
+      currentRow.push(dayOfWeek);
 
       for (const day of days) {
          const data = day.innerText.split(' ');
-         console.log('data:');
-         console.log(data);
-
-         //  const date = day.getAttribute('data-date');
 
          if (data.length > 1) {
             const contribution = {
                count: data[0] === 'No' ? 0 : +data[0],
-               date: day.dataset.date,
                name: dayOfWeek,
+               date: day.dataset.date,
                month: data[3],
-               day: data[4],
-               year: day.dataset.date?.split('-')[0],
+               day: data[4].slice(0, -3),
+               year: day.dataset.date!.split('-')[0],
                level: +day.dataset.level!,
             };
             currentRow.push(contribution);
          } else {
-            currentRow.push(null);
+            // currentRow.push(null)
          }
       }
 
