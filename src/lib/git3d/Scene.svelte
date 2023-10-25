@@ -45,6 +45,10 @@
    }
 
    function normalize(count: number, base = 4, offset = 2) {
+      if (count === undefined) {
+         return 0;
+      }
+         
       switch (true) {
          case count === 0:
             return base;
