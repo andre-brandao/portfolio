@@ -6,16 +6,18 @@ categories:
   - sveltekit
   - supabase
   - SQL
-  - postgreensSQL
+  - postgreesSQL
 published: true
 ---
 
 ## Table of Contents
 
-## Still in progrees!!!!
+## Still in progrees
 
 ## Tables
+
 ![supa tables](supabase-tables.png)
+
 ### cliente
 
 ```sql
@@ -74,10 +76,18 @@ create table
   ) tablespace pg_default;
 ```
 
-
 ## Policies
 
+### tables
+
 ![policies](supabase-policies.png)
+
+### buckets
+
+```sql
+
+create policy "Allow authenticated users full access" on storage.buckets for all to authenticated using (bucket = 'produto_imgs');
+```
 
 ## Triggers and Functions
 
@@ -100,6 +110,7 @@ execute procedural public.handle_new_auth ();
 ```
 
 ### calculate total automaticly
+
 ```sql
 
 CREATE
