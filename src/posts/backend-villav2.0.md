@@ -112,7 +112,6 @@ execute procedural public.handle_new_auth ();
 ### calculate total automaticly
 
 ```sql
-
 CREATE
 OR REPLACE FUNCTION update_pedido_total () RETURNS TRIGGER AS $$
 BEGIN
