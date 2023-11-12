@@ -15,6 +15,7 @@
 <section>
    <ul class="posts">
       {#each data.posts as post}
+         <a href={post.slug}></a>
          <button
             on:click={() => {
                goto(post.slug, {
