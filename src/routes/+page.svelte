@@ -3,19 +3,16 @@
    import { goto } from '$app/navigation';
    import { title } from '$lib/config';
    export let data;
-
- 
 </script>
 
 <svelte:head>
-   <title >{title}</title>
+   <title>{title}</title>
 </svelte:head>
 
 <!-- Posts -->
 <section>
    <ul class="posts">
       {#each data.posts as post}
-         <a href={post.slug}></a>
          <button
             on:click={() => {
                goto(post.slug, {
@@ -23,6 +20,7 @@
                });
             }}
          >
+            <a href={post.slug} />
             <li class="post">
                <p class="title">{post.title}</p>
                <p />
