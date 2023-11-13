@@ -7,7 +7,7 @@ categories:
   - C#
   - PUC-MG
 
-published: false
+published: true
 ---
 ## Table of Contents
 
