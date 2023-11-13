@@ -103,8 +103,6 @@ Para implementar a estratégia de backtracking, podemos seguir os seguintes pass
 
 </center>
 
-
-
 <button on:click={restartAnimation}>Restart Animation</button>
 
 {#key restartCount}
@@ -147,3 +145,27 @@ def subset_sum_backtracking(array: List[int], target_sum: int) -> Tuple[List[int
     print(f'Backtrack Expanded {expanded} nodes')
     return result, expanded
 ```
+
+## Testes
+
+Todos os testes foram realizados em um processador 10th Generation Intel Core i7-1065G7 e 16BG de RAM.
+
+### Teste 1
+
+![test1](paa-1-test1.png)
+
+### Teste 2
+
+![test2](paa-1-test2.png)
+
+### Teste 3
+
+![test3](paa-1-test3.png)
+
+### Teste 4
+
+![test4](paa-1-test4.png)
+
+### Teste 5
+
+![test5](paa-1-test5.png)
