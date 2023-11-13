@@ -150,6 +150,32 @@ def subset_sum_backtracking(array: List[int], target_sum: int) -> Tuple[List[int
 
 Todos os testes foram realizados em um processador 10th Generation Intel Core i7-1065G7 e 16BG de RAM.
 
+### Entradas
+
+random.sample é uma função que retorna uma lista de elementos únicos de um determinado intervalo.
+
+range representa o maior e menor valores contidos no intervalo.
+
+o ultimo numero(10 para o primeiro teste) representa o valor objetivo para o problema.
+
+o codigo para todos os testes pode ser encontrado em: [testes.py](https://github.com/andre-brandao/PAA/blob/main/main.py)
+
+```py
+# Testes variados
+test_data = [
+    ([1, 2, 3, 4, 5], 10),
+    ([3, 7, 2, 8, 4], 15),
+    (random.sample(range(1, 11), 10), 12),
+    (random.sample(range(1, 51), 50), 70),
+    (random.sample(range(1, 101), 100), 123),
+    (random.sample(range(1, 201), 200), 234),
+    (random.sample(range(1, 501), 500), 567),
+    (random.sample(range(1, 1001), 1000), 123),
+    (random.sample(range(1, 1001), 1000), 1234),
+    (random.sample(range(1, 10001), 10000), 12345),
+]
+```
+
 ### Teste 1
 
 ![test1](paa-1-test1.png)
