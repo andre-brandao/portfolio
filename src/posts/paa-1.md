@@ -1,11 +1,11 @@
 ---
-title: PAA Sum of Subsets Backtraking
+title: PAA Sum of Subsets Backtraking (pt-br)
 description: Fpr puc.
-date: '2023-6-02'
+date: '2023-11-14'
 categories:
-  - Unity
-  - C#
-  - PUC-MG
+  - python
+  - PAA
+  - pt-bt
 
 published: true
 ---
@@ -211,6 +211,22 @@ No teste 5 os algoritmos foram executados com o mesmo tamanho de array, com entr
 No teste 6 os algoritmos foram executados com o mesmo tamanho de array, com entradas de soma diferentes em ordem crescente. O objetivo é analisar a variação de tempo dos algoritmos conforme o valor da soma aumenta em um array relativamente grande (tamanho 5000).
 
 ![test5](paa-1-test5.png)
+
+## Comparações e Conclusões
+
+A partir da análise dos dados obtidos com os testes realizados, podemos deduzir que o algoritmo de backtracking leva ligeira vantagem em relação ao algoritmo de força bruta em quase todas as situações.
+
+Já no primeiro teste, o algoritmo de força bruta tem um execution time menor apenas nos dois primeiros casos, quando o tamanho do array era 5, assim que esse tamanho foi aumentado, o algoritmo de backtracking se mostrou bem mais eficiente.Vale lembrar que em 2 das entradas o algoritmo de backtracking deu timeout.
+
+No segundo teste apenas no primeiro valor de entrada o algoritmo de força bruta obteve vantagem, decretando que quanto mais o tamanho do array aumenta maior a diferença de execution time do algoritmo de força bruta para o de backtracking, também é importante destacar que a quantidade de nodos visitados aumenta conforme o tamanho do array aumenta, o que impacta diretamente no tempo de execução do algoritmo.
+
+O segundo teste foi executado com uma soma sendo metade do maior valor possivel do array, já no terceiro essa soma foi o dobro do maior valor possível do array, os resultados foram parecidos. Em resumo o Backtracking obteve vantagem no quesito tempo de execução em todas as entradas. Uma diferença perceptível notada entre o teste 2 e o 3, foi a constância dos resultados, isso provavelmente se deve que com uma soma de maior valor existe maiores possibilidades de ser encontrado um subconjunto e por isso o fator randômico é minimizado.
+
+No quarto teste podemos observar como os algoritmos lidam com a mudança do valor da soma, podendo ser observado certa constância no algortimo de backtracking, enquanto que o algoritmo de força bruta possui melhores tempos quando o valor da soma é igual, ou o dobro do tamanho do array. Isso pode ser explicado pela quantidade de combinações possíveis que podem ser encontradas, que em valores muito baixos e muito altos são poucas e dificulta para um algoritmo que analisa nodo por nodo.
+
+No quinto teste, foi testado a mesma situação do quarto teste, porém com um tamanho de array bem maior, pode ser observado que o único valor em que o algoritmo de força bruta não deu timeout foi quando o valor da soma era igual ao valor do array, confirmando a tese proposta no parágrafo acima que o algoritmo de força bruta apresenta melhores resultados de tempo de execução quando submetidos a casos onde existem maiores quantidade de subconjuntos resultados na amostra. É importante observar que o algoritmo de backtracking se mantém estável, com um leve aumento no tempo de execução conforme o valor da soma aumenta.
+
+O sexto teste segue a mesma linha dos testes 4 e 5, com a diferença do aumento do tamanho do array para 5000, isso permite observar o ponto onde o backtracking encontra o timeout, onde a soma era igual a 100000. O algoritmo de força bruta não foi capaz de executar nenhuma entrada desse teste.
 
 ## Relatorio Final
 
