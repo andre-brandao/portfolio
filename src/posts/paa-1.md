@@ -154,7 +154,7 @@ Todos os testes foram realizados em um processador 10th Generation Intel Core i7
 
 random.sample é uma função que retorna uma lista de elementos únicos de um determinado intervalo.
 
-range representa o maior e menor valores contidos no intervalo.
+range representa o intervalo.
 
 o ultimo numero(10 para o primeiro teste) representa o valor objetivo para o problema.
 
@@ -178,6 +178,8 @@ test_data = [
 
 ### Teste 1
 
+Nesse primeiro teste, executamos os algoritmos com entradas variadas para podermos identificar quais testes poderiam ser relevantes para identificarmos as diferenças, vantagens e desvantagens dos algoritmos de brute force e backtracking.
+
 ![test1](paa-1-test1.png)
 
 ### Teste 2
@@ -185,6 +187,8 @@ test_data = [
 ![test2](paa-1-test2.png)
 
 ### Teste 3
+
+No teste 3 os algoritmos foram executados com entradas de tamanho crescente, sempre mantendo o valor da soma o dobro do número de elementos do array. O objetivo desse teste é observar a variação de tempo conforme o tamanho do array vai aumentando.
 
 ![test3](paa-1-test3.png)
 
@@ -195,3 +199,7 @@ test_data = [
 ### Teste 5
 
 ![test5](paa-1-test5.png)
+
+### Teste 6
+
+![test6](paa-1-test6.png)
