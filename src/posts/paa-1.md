@@ -60,9 +60,9 @@ def subset_sum_bruteforce(array: List[int], target_sum: int) -> Tuple[List[int],
     for i in range(1, 2 ** n):
         subset = []
         subset_sum = 0
+        expanded += 1
         # Para cada bit, verifica se o elemento correspondente deve estar no subconjunto
         for j in range(n):
-            expanded += 1
             #  Se o bit j estiver ligado, o elemento j é adicionado ao subconjunto
             if (i >> j) & 1:
                 subset.append(array[j])
@@ -184,22 +184,37 @@ Nesse primeiro teste, executamos os algoritmos com entradas variadas para poderm
 
 ### Teste 2
 
+No teste 2 os algoritmos foram executados com entradas de tamanho crescente, sempre mantendo o valor da soma a metade do número de elementos do array. O objetivo desse teste é observar a variação de tempo conforme o tamanho do array vai aumentando com um valor de soma relativamente baixo.
+
 ![test2](paa-1-test2.png)
 
 ### Teste 3
 
-No teste 3 os algoritmos foram executados com entradas de tamanho crescente, sempre mantendo o valor da soma o dobro do número de elementos do array. O objetivo desse teste é observar a variação de tempo conforme o tamanho do array vai aumentando.
+No teste 3 os algoritmos foram executados com entradas de tamanho crescente, sempre mantendo o valor da soma o dobro do número de elementos do array. O objetivo desse teste é observar a variação de tempo conforme o tamanho do array vai aumentando com um valor de soma relativamente alto.
 
 ![test3](paa-1-test3.png)
 
 ### Teste 4
 
+No teste 4 os algoritmos foram executados com o mesmo tamanho de array, com entradas de soma diferentes em ordem crescente. O objetivo é analisar a variação de tempo dos algoritmos conforme o valor da soma aumenta.
+
 ![test4](paa-1-test4.png)
 
 ### Teste 5
 
-![test5](paa-1-test5.png)
+No teste 5 os algoritmos foram executados com o mesmo tamanho de array, com entradas de soma diferentes em ordem crescente. O objetivo é analisar a variação de tempo dos algoritmos conforme o valor da soma aumenta em um array relativamente médio (tamanho 2000).
+
+![test6](paa-1-test6.png)
 
 ### Teste 6
 
-![test6](paa-1-test6.png)
+No teste 6 os algoritmos foram executados com o mesmo tamanho de array, com entradas de soma diferentes em ordem crescente. O objetivo é analisar a variação de tempo dos algoritmos conforme o valor da soma aumenta em um array relativamente grande (tamanho 5000).
+
+![test5](paa-1-test5.png)
+
+## Relatorio Final
+
+O algoritmo de backtracking é mais eficiente que o algoritmo de brute force, pois ele não precisa gerar todas as combinações possíveis, ele vai gerando as combinações e verificando se a soma é igual ao objetivo, se não for ele volta e tenta outra combinação, descartando combinações impossiveis.
+
+O algoritmo de brute force é mais simples de implementar, porém ele é muito ineficiente, pois ele gera todas as combinações possíveis e verifica se a soma é igual ao objetivo, então encontrar o objetivo de forma rapida se torna meio aleatório, pois depende da ordem que as combinações são geradas e calculadas.
+
